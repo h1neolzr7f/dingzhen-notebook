@@ -37,3 +37,10 @@ cd apps\android-capture
 - 登录粉笔、保存 Cookie、自动填账号
 - 绕过付费或未授权内容
 - 把无障碍服务扩到任意 App
+
+## 怎么提
+
+- 缺陷用 [Bug 模板](https://github.com/h1neolzr7f/dingzhen-notebook/issues/new?template=bug_report.yml)
+- 建议用 [功能模板](https://github.com/h1neolzr7f/dingzhen-notebook/issues/new?template=feature_request.yml)
+- 安全问题走 [SECURITY.md](SECURITY.md)，不要在公开 Issue 里贴私人数据
+- Pull Request 请说明为什么改、改了什么，并勾选模板里的检查项

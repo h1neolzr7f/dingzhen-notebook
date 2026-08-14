@@ -8,7 +8,7 @@
 - 真实试卷截图或完整题干
 - 本机绝对路径、配对密钥、局域网地址
 
-安全问题可通过 GitHub 的 [Private vulnerability reporting](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability) 提交，或只描述复现步骤、不带私人数据。
+安全问题请用 GitHub 的 [Private vulnerability reporting](https://github.com/h1neolzr7f/dingzhen-notebook/security/advisories/new) 提交，或只描述复现步骤、不带私人数据。
 
 ## 项目边界
 

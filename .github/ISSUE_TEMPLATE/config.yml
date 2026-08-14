@@ -1,1 +1,11 @@
 blank_issues_enabled: false
+contact_links:
+  - name: 免责声明
+    url: https://github.com/h1neolzr7f/dingzhen-notebook/blob/main/DISCLAIMER.md
+    about: 本项目是非官方工具，不登录粉笔。
+  - name: 负责任使用
+    url: https://github.com/h1neolzr7f/dingzhen-notebook/blob/main/RESPONSIBLE_USE.md
+    about: 只整理你已经完成、且有权查看的试卷。
+  - name: 下载一键包
+    url: https://github.com/h1neolzr7f/dingzhen-notebook/releases/tag/v1.3.4
+    about: Windows 小白请先下 Releases，不要直接翻源码。

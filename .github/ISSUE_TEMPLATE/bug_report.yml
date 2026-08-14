@@ -5,7 +5,9 @@ labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: 请不要粘贴粉笔账号、密码、Cookie、真实试卷截图或本机数据库。
+      value: |
+        请不要粘贴粉笔账号、密码、Cookie、真实试卷截图或本机数据库。
+        安全问题请走 [SECURITY.md](https://github.com/h1neolzr7f/dingzhen-notebook/blob/main/SECURITY.md)。
   - type: textarea
     id: what
     attributes:

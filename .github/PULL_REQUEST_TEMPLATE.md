@@ -7,3 +7,4 @@
 - [ ] 没有提交真实试卷、账号、Cookie 或本机数据库
 - [ ] 没有加入登录粉笔或操作任意 App 的能力
 - [ ] 相关测试已更新
+- [ ] 读过 `DISCLAIMER.md` 与 `RESPONSIBLE_USE.md`

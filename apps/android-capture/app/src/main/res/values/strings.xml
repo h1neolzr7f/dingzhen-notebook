@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">丁真笔记本</string>
+    <string name="accessibility_service_label">丁真自动翻页</string>
+    <string name="accessibility_description">打开后只在已经登录的粉笔试卷里帮你点「下一题」。不登录粉笔，不操作其它 App。小米请到无障碍最底下的「已下载的服务」里打开本项。</string>
+</resources>

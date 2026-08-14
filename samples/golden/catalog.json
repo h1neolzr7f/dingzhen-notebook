@@ -1,0 +1,117 @@
+[
+  {
+    "case_id": "collapsed_explanation",
+    "expected": "collapsed_explanation\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "conflicting_result",
+    "expected": "conflicting_result\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "correct",
+    "expected": "correct\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "duplicate_frame",
+    "expected": "duplicate_frame\\expected.json",
+    "image_count": 2
+  },
+  {
+    "case_id": "figure_reasoning",
+    "expected": "figure_reasoning\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "four_screen_question",
+    "expected": "four_screen_question\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "interrupted_resume",
+    "expected": "interrupted_resume\\expected.json",
+    "image_count": 2
+  },
+  {
+    "case_id": "long_explanation",
+    "expected": "long_explanation\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "long_stem",
+    "expected": "long_stem\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "material_question",
+    "expected": "material_question\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "missing_official_explanation",
+    "expected": "missing_official_explanation\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "multi_image",
+    "expected": "multi_image\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "network_error",
+    "expected": "network_error\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "ocr_b_to_8",
+    "expected": "ocr_b_to_8\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "ocr_c_to_g",
+    "expected": "ocr_c_to_g\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "ordinary_single_choice",
+    "expected": "ordinary_single_choice\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "question_number_failure",
+    "expected": "question_number_failure\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "system_popup",
+    "expected": "system_popup\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "table_analysis",
+    "expected": "table_analysis\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "true_false",
+    "expected": "true_false\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "unanswered",
+    "expected": "unanswered\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "verified_multi_correct",
+    "expected": "verified_multi_correct\\expected.json",
+    "image_count": 1
+  },
+  {
+    "case_id": "verified_wrong",
+    "expected": "verified_wrong\\expected.json",
+    "image_count": 1
+  }
+]

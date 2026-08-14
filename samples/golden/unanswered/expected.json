@@ -1,0 +1,68 @@
+{
+  "case_id": "unanswered",
+  "expected_status": "verified",
+  "expected_review_reasons": [],
+  "question": {
+    "id": "q_golden_003",
+    "paper_id": "paper_golden_catalog",
+    "sequence": 3,
+    "question_type": "single_choice",
+    "stem_md": "模拟题干：用于离线回归，不代表真实平台内容。",
+    "options": [
+      {
+        "label": "A",
+        "content_md": "选项甲"
+      },
+      {
+        "label": "B",
+        "content_md": "选项乙"
+      },
+      {
+        "label": "C",
+        "content_md": "选项丙"
+      }
+    ],
+    "user_answer": [],
+    "official_answer": [
+      "C"
+    ],
+    "official_explanation_md": "官方解析：模拟证据",
+    "ocr_confidence": 0.99,
+    "parse_confidence": 0.99,
+    "evidence": {
+      "question_frames": [
+        "samples/golden/unanswered/screen_01.png"
+      ],
+      "analysis_frames": [
+        "samples/golden/unanswered/screen_01.png"
+      ],
+      "field_regions": {
+        "official_answer": [
+          {
+            "image": "samples/golden/unanswered/screen_01.png",
+            "bbox": [
+              36,
+              600,
+              480,
+              680
+            ],
+            "confidence": 0.99
+          }
+        ],
+        "official_explanation_md": [
+          {
+            "image": "samples/golden/unanswered/screen_01.png",
+            "bbox": [
+              36,
+              780,
+              980,
+              860
+            ],
+            "confidence": 0.99
+          }
+        ]
+      }
+    }
+  },
+  "notes": "Synthetic offline fixture; no real account or platform content."
+}

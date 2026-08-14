@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FenbiCapture" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/page_cream</item>
+        <item name="android:navigationBarColor">@color/page_cream</item>
+        <item name="android:windowBackground">@color/page_cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorAccent">@color/brand_teal</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>

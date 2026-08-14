@@ -1,0 +1,11 @@
+{
+  "case_id": "duplicate_frame",
+  "expected_status": "deduplicated",
+  "question": null,
+  "expected_unique_frames": 1,
+  "expected_duplicate_frames": 1,
+  "evidence_frames": [
+    "samples/golden/duplicate_frame/screen_01.png",
+    "samples/golden/duplicate_frame/screen_02.png"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "case_id": "verified_multi_correct",
+  "expected_status": "verified",
+  "question": {
+    "id": "q_fixture_002",
+    "paper_id": "paper_fixture_001",
+    "sequence": 2,
+    "section": "常识判断",
+    "subsection": "科技常识",
+    "question_type": "multiple_choice",
+    "stem_md": "下列属于可再生能源的是：",
+    "options": [
+      {
+        "label": "A",
+        "content_md": "太阳能"
+      },
+      {
+        "label": "B",
+        "content_md": "煤炭"
+      },
+      {
+        "label": "C",
+        "content_md": "风能"
+      },
+      {
+        "label": "D",
+        "content_md": "天然气"
+      }
+    ],
+    "user_answer": [
+      "A",
+      "C"
+    ],
+    "official_answer": [
+      "A",
+      "C"
+    ],
+    "is_correct": true,
+    "attempt_state": "answered",
+    "official_explanation_md": "太阳能和风能可以在自然过程中持续补充，属于可再生能源；煤炭和天然气属于化石能源。",
+    "official_knowledge_points": [
+      "科技常识",
+      "能源分类"
+    ],
+    "ocr_confidence": 0.98,
+    "parse_confidence": 0.97,
+    "evidence": {
+      "question_frames": [
+        "samples/golden/verified_multi_correct/screen_01.png"
+      ],
+      "analysis_frames": [
+        "samples/golden/verified_multi_correct/screen_01.png"
+      ],
+      "field_regions": {
+        "official_answer": [
+          {
+            "image": "samples/golden/verified_multi_correct/screen_01.png",
+            "bbox": [
+              88,
+              785,
+              350,
+              830
+            ],
+            "confidence": 0.99
+          }
+        ],
+        "official_explanation_md": [
+          {
+            "image": "samples/golden/verified_multi_correct/screen_01.png",
+            "bbox": [
+              88,
+              970,
+              995,
+              1055
+            ],
+            "confidence": 0.98
+          }
+        ]
+      }
+    }
+  },
+  "expected_review_reasons": []
+}

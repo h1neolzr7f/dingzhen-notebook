@@ -1,0 +1,118 @@
+# 丁真笔记本
+
+### v1.3.4 · 本地优先的粉笔错题本
+
+**收题 · 校对 · 错题 · 复习 · 组卷 · 今知错题包**
+
+![Version](https://img.shields.io/badge/Version-1.3.4-0F766E)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![Android](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Local First](https://img.shields.io/badge/Privacy-Local--first-7A5AF8)
+
+[一键包 Releases](https://github.com/h1neolzr7f/dingzhen-notebook/releases) ·
+[使用说明](docs/user-guide.md) ·
+[负责任使用](RESPONSIBLE_USE.md) ·
+[参与贡献](CONTRIBUTING.md) ·
+[路线图](ROADMAP.md)
+
+> [!IMPORTANT]
+> **非官方项目。** 本软件不登录粉笔，也不要账号密码。请先用粉笔官方 App 登录，打开你已经完成、且有权查看的试卷，再用来收题。本项目与粉笔、猿辅导、今知错题本没有隶属或合作关系。详见 [免责声明](DISCLAIMER.md)。
+
+> [!NOTE]
+> Windows 小白请下载 [Releases](https://github.com/h1neolzr7f/dingzhen-notebook/releases) 里的 `DingzhenNotebook-OneClick-v1.3.4.zip`，解压后先看 `先看这个.txt`，再双击 `一键开始.bat`。手机安装包里的 `dingzhen-notebook-1.3.4.apk`。
+
+## 它是做什么的
+
+粉笔官方 App 负责登录和做题。丁真笔记本只负责把**已经完成的试卷**整理成本地错题本：题干、你的答案、正确答案、解析、复习轨道、错题卷。
+
+数据只在这台电脑或这台手机上。缺官方答案或解析时，题目只能标成「待校对」，AI 不能瞎填。
+
+```mermaid
+flowchart LR
+    A[粉笔官方 App<br/>你已登录] --> B[已完成试卷]
+    B --> C[手机采集 / 导入截图]
+    C --> D[OCR 与人工校对]
+    D --> E[本地错题本]
+    E --> F[复习 / 错题卷 / 今知错题包]
+```
+
+## 小白三步
+
+1. 安装 [Python 3.12 x64](https://www.python.org/downloads/release/python-31210/)（勾选 Add python.exe to PATH）。
+2. 解压一键包，双击 `一键开始.bat`。第一次会自动建环境，稍等即可。
+3. 手机安装 `丁真笔记本-1.3.4.apk`。在已经登录的粉笔里打开已完成试卷，再回本软件点「开始采集」。
+
+找不到自动翻页时：点「点我进入开关页」，打开「丁真自动翻页」，按返回。小米请滑到无障碍最底下的「已下载的服务」。实在不想找，选「我自己翻」。
+
+## 手机端
+
+桌面图标是 **丁真笔记本**。底部五页就是全部功能：
+
+| 页 | 做什么 |
+|---|---|
+| 首页 | 错题 / 待复习 / 已掌握，今日复习，薄弱知识点 |
+| 收题 | 在已经登录的粉笔里采集，不打开猿题库 |
+| 错题 | 搜索、按试卷 / 分类 / 知识点筛选，校对 |
+| 复习 | 预习 / 一刷 / 二刷 / 间隔 / 已掌握 |
+| 我的 | 导入导出今知错题包、错题卷 HTML |
+
+题干自动识别在电脑完成：采完用配对码传到电脑，识别后再把试卷 JSON 或错题包导回手机。手机上也可以自己校对。
+
+## 电脑端
+
+| 入口 | 说明 |
+|---|---|
+| `一键开始.bat` | 推荐。Mock OCR，不下载模型，先把流程跑通 |
+| `start_windows.bat` | 真实 PaddleOCR，首次会下载模型 |
+| `start_cli_demo.bat` | 命令行演示导入闭环 |
+
+```powershell
+git clone https://github.com/h1neolzr7f/dingzhen-notebook.git
+cd dingzhen-notebook
+.\一键开始.bat
+```
+
+开发安装：
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe -m apps.desktop.main --ocr-engine mock
+```
+
+## 硬规则
+
+- 不登录粉笔，不保存密码 / Cookie / Token
+- 只打开粉笔官方客户端（`com.fenbi.android.servant` 等），不打开猿题库、小猿搜题
+- 缺用户答案、官方答案、官方解析或证据 → `needs_review`
+- AI 不能覆盖官方字段
+- 非必要权限不申请：不申请通知，不扫描全部已装应用
+
+## 仓库结构
+
+```text
+apps/desktop/          Windows 桌面
+apps/android-capture/  丁真笔记本 Android
+packages/              OCR、采集、错题包、复习、组卷
+samples/golden/        合成回归数据，没有真实试卷
+scripts/               构建与一键打包
+tests/                 pytest
+```
+
+## 隐私
+
+- 错题、截图、数据库默认只在本机 `data/`、`exports/`
+- 发行包和 git 不含你的错题
+- 局域网传图需要同一 Wi-Fi 和配对码，密钥用完即弃
+
+## 许可
+
+代码为 [MIT License](LICENSE)。代码许可不授予粉笔、猿辅导、今知或任何试卷内容的权利。
+
+本项目按现状提供。完整边界见 [DISCLAIMER.md](DISCLAIMER.md) 与 [RESPONSIBLE_USE.md](RESPONSIBLE_USE.md)。
+
+---
+
+**Dingzhen Notebook** is a local-first personal workbook for papers you already finished in the official Fenbi app. It never logs into Fenbi. Not affiliated with Fenbi, Yuanfudao, or Jinzhi.

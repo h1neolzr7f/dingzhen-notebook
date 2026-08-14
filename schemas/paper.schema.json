@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fenbi-study/schemas/paper.schema.json",
+  "title": "Paper",
+  "type": "object",
+  "required": ["id", "title"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "platform": {"type": "string"},
+    "exam_category": {"type": ["string", "null"]},
+    "subject": {"type": ["string", "null"]},
+    "started_at": {"type": ["string", "null"], "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "total_questions": {"type": "integer", "minimum": 0},
+    "answered_questions": {"type": "integer", "minimum": 0},
+    "correct_questions": {"type": "integer", "minimum": 0},
+    "score": {"type": ["number", "null"]},
+    "capture_status": {"type": "string"}
+  }
+}

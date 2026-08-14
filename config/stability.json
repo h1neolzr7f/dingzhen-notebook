@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "ocr_confidence_threshold": 0.8,
+  "max_workers": 2,
+  "max_unchanged_frames": 3,
+  "device_profiles": [
+    {
+      "name": "android-reference-1080x2400",
+      "reference_width": 1080,
+      "reference_height": 2400,
+      "reference_density": 440,
+      "safe_margin": 16
+    }
+  ],
+  "page_profiles": [
+    {
+      "name": "fenbi-default",
+      "question_markers": ["题目", "你的答案"],
+      "analysis_markers": ["正确答案", "官方解析"],
+      "next_button_markers": ["下一题"]
+    }
+  ]
+}
+

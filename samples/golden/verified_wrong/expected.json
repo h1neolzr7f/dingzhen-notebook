@@ -1,0 +1,81 @@
+{
+  "case_id": "verified_wrong",
+  "expected_status": "verified",
+  "question": {
+    "id": "q_fixture_001",
+    "paper_id": "paper_fixture_001",
+    "sequence": 1,
+    "section": "判断推理",
+    "subsection": "逻辑判断",
+    "question_type": "single_choice",
+    "stem_md": "甲、乙、丙三人中，只有一人通过。已知甲未通过，乙与丙结果相反。通过的是？",
+    "options": [
+      {
+        "label": "A",
+        "content_md": "甲"
+      },
+      {
+        "label": "B",
+        "content_md": "乙"
+      },
+      {
+        "label": "C",
+        "content_md": "丙"
+      },
+      {
+        "label": "D",
+        "content_md": "无法确定"
+      }
+    ],
+    "user_answer": [
+      "B"
+    ],
+    "official_answer": [
+      "C"
+    ],
+    "is_correct": false,
+    "attempt_state": "answered",
+    "official_explanation_md": "甲未通过；乙与丙结果相反且只有一人通过。结合题设可知丙通过，因此选 C。",
+    "official_knowledge_points": [
+      "逻辑判断",
+      "矛盾关系"
+    ],
+    "ocr_confidence": 0.99,
+    "parse_confidence": 0.98,
+    "evidence": {
+      "question_frames": [
+        "samples/golden/verified_wrong/screen_01.png"
+      ],
+      "analysis_frames": [
+        "samples/golden/verified_wrong/screen_01.png"
+      ],
+      "field_regions": {
+        "official_answer": [
+          {
+            "image": "samples/golden/verified_wrong/screen_01.png",
+            "bbox": [
+              88,
+              785,
+              350,
+              830
+            ],
+            "confidence": 0.99
+          }
+        ],
+        "official_explanation_md": [
+          {
+            "image": "samples/golden/verified_wrong/screen_01.png",
+            "bbox": [
+              88,
+              970,
+              995,
+              1055
+            ],
+            "confidence": 0.98
+          }
+        ]
+      }
+    }
+  },
+  "expected_review_reasons": []
+}

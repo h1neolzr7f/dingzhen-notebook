@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fenbi-study/schemas/paper-export.schema.json",
+  "title": "PaperExport",
+  "type": "object",
+  "required": ["schema_version", "paper", "questions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "paper": {"$ref": "paper.schema.json"},
+    "questions": {"type": "array", "items": {"$ref": "question.schema.json"}}
+  }
+}

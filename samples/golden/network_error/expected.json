@@ -1,0 +1,7 @@
+{
+  "case_id": "network_error",
+  "expected_status": "rejected_frame",
+  "question": null,
+  "expected_review_reasons": ["network_error_page"],
+  "evidence_frames": ["samples/golden/network_error/screen_01.png"]
+}

@@ -1,0 +1,12 @@
+{
+  "lines": [
+    {"text": "2 + 2 = ?", "confidence": 0.99, "bbox": [70, 320, 800, 365]},
+    {"text": "A. 3", "confidence": 0.99, "bbox": [88, 410, 400, 455]},
+    {"text": "B. 4", "confidence": 0.99, "bbox": [88, 465, 400, 510]},
+    {"text": "C. 5", "confidence": 0.99, "bbox": [88, 520, 400, 565]},
+    {"text": "D. 6", "confidence": 0.99, "bbox": [88, 575, 400, 620]},
+    {"text": "你的答案：A", "confidence": 0.99, "bbox": [88, 690, 350, 735]},
+    {"text": "正确答案：B", "confidence": 0.99, "bbox": [88, 785, 350, 830]},
+    {"text": "官方解析：2 与 2 相加等于 4，因此选择 B。", "confidence": 0.99, "bbox": [88, 970, 995, 1055]}
+  ]
+}

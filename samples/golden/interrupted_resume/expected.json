@@ -1,0 +1,80 @@
+{
+  "case_id": "interrupted_resume",
+  "expected_status": "verified",
+  "question": {
+    "id": "q_fixture_005",
+    "paper_id": "paper_fixture_001",
+    "sequence": 5,
+    "section": "资料分析",
+    "question_type": "single_choice",
+    "stem_md": "某材料显示第一季度产量同比增长 10%。",
+    "options": [
+      {
+        "label": "A",
+        "content_md": "8%"
+      },
+      {
+        "label": "B",
+        "content_md": "9%"
+      },
+      {
+        "label": "C",
+        "content_md": "10%"
+      },
+      {
+        "label": "D",
+        "content_md": "11%"
+      }
+    ],
+    "user_answer": [
+      "C"
+    ],
+    "official_answer": [
+      "C"
+    ],
+    "is_correct": true,
+    "attempt_state": "answered",
+    "official_explanation_md": "题干已直接给出同比增长 10%，对应 C。",
+    "official_knowledge_points": [
+      "资料分析",
+      "直接读数"
+    ],
+    "ocr_confidence": 0.96,
+    "parse_confidence": 0.95,
+    "evidence": {
+      "question_frames": [
+        "samples/golden/interrupted_resume/screen_01.png"
+      ],
+      "analysis_frames": [
+        "samples/golden/interrupted_resume/screen_02.png"
+      ],
+      "field_regions": {
+        "official_answer": [
+          {
+            "image": "samples/golden/interrupted_resume/screen_02.png",
+            "bbox": [
+              88,
+              320,
+              350,
+              365
+            ],
+            "confidence": 0.98
+          }
+        ],
+        "official_explanation_md": [
+          {
+            "image": "samples/golden/interrupted_resume/screen_02.png",
+            "bbox": [
+              88,
+              470,
+              995,
+              530
+            ],
+            "confidence": 0.97
+          }
+        ]
+      }
+    }
+  },
+  "expected_review_reasons": []
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fenbi-study/schemas/question.schema.json",
+  "title": "Question",
+  "type": "object",
+  "required": ["id", "paper_id", "sequence"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "paper_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
+    "section": {"type": ["string", "null"]},
+    "subsection": {"type": ["string", "null"]},
+    "question_type": {"enum": ["single_choice", "multiple_choice", "true_false", "other"]},
+    "stem_md": {"type": "string"},
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label"],
+        "properties": {"label": {"type": "string"}, "content_md": {"type": "string"}}
+      }
+    },
+    "user_answer": {"type": ["array", "null"], "items": {"type": "string"}},
+    "official_answer": {"type": ["array", "null"], "items": {"type": "string"}},
+    "official_explanation_md": {"type": ["string", "null"]},
+    "verification_status": {
+      "enum": ["raw_captured", "preprocessed", "ocr_done", "parsed", "completeness_checked", "needs_review", "verified", "exported"]
+    },
+    "review_reasons": {"type": "array", "items": {"type": "string"}},
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "question_frames": {"type": "array", "items": {"type": "string"}},
+        "analysis_frames": {"type": "array", "items": {"type": "string"}},
+        "field_regions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["image"],
+              "properties": {
+                "image": {"type": "string"},
+                "bbox": {
+                  "type": ["array", "null"],
+                  "items": {"type": "integer"},
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-integrity-rule": "Missing user_answer, official_answer, or official_explanation_md MUST set verification_status to needs_review."
+}

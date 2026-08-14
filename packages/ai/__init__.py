@@ -1,0 +1,118 @@
+"""P5 local-first AI analysis package.
+
+The public surface intentionally keeps adapters, prompts, caching and the
+orchestrator independent so a Fake/Callable model can be used in CI without
+network access or secrets.
+"""
+
+from .adapters import (
+    AIModel,
+    AIModelAdapter,
+    CallableAIAdapter,
+    CallableAIModelAdapter,
+    FakeAIModelAdapter,
+    HTTPAIModelAdapter,
+    HttpAIModelAdapter,
+    LocalHTTPAIModelAdapter,
+    LocalHTTPAdapter,
+    LocalHttpAIAdapter,
+    MockAIAdapter,
+    MockAIModelAdapter,
+    coerce_response,
+)
+from .cache import (
+    AnalysisCache,
+    CompositeAnalysisCache,
+    FileAnalysisCache,
+    FileCache,
+    HybridAnalysisCache,
+    NullAnalysisCache,
+    SQLiteAnalysisCache,
+    SQLiteCache,
+    canonical_json,
+    input_hash,
+    make_cache_key,
+)
+from .models import (
+    AIAdapterError,
+    AIConfigurationError,
+    AIError,
+    AIResponse,
+    AIUsage,
+    AnalysisKind,
+    AnalysisResult,
+    AnalysisStatus,
+    CacheKey,
+    PROTECTED_OFFICIAL_FIELDS,
+)
+from .prompts import (
+    PROMPT_VERSION,
+    PromptRegistry,
+    PromptTemplate,
+    build_analysis_prompt,
+    build_prompt,
+    split_official_fields,
+    split_question_payload,
+)
+from .service import (
+    AIAnalysisService,
+    AIAnalyzer,
+    AnalysisService,
+    deterministic_history_statistics,
+    deterministic_paper_statistics,
+    deterministic_review_schedule,
+)
+from .stats import CostSummary, CostTracker
+
+__all__ = [
+    "AIAdapterError",
+    "AIAnalysisService",
+    "AIAnalyzer",
+    "AIConfigurationError",
+    "AIError",
+    "AIModel",
+    "AIModelAdapter",
+    "AIResponse",
+    "AIUsage",
+    "AnalysisCache",
+    "AnalysisKind",
+    "AnalysisResult",
+    "AnalysisService",
+    "AnalysisStatus",
+    "CacheKey",
+    "CallableAIAdapter",
+    "CallableAIModelAdapter",
+    "CompositeAnalysisCache",
+    "CostSummary",
+    "CostTracker",
+    "FakeAIModelAdapter",
+    "FileAnalysisCache",
+    "FileCache",
+    "HTTPAIModelAdapter",
+    "HybridAnalysisCache",
+    "HttpAIModelAdapter",
+    "LocalHTTPAIModelAdapter",
+    "LocalHTTPAdapter",
+    "LocalHttpAIAdapter",
+    "MockAIAdapter",
+    "MockAIModelAdapter",
+    "NullAnalysisCache",
+    "PROMPT_VERSION",
+    "PROTECTED_OFFICIAL_FIELDS",
+    "PromptRegistry",
+    "PromptTemplate",
+    "SQLiteAnalysisCache",
+    "SQLiteCache",
+    "build_analysis_prompt",
+    "build_prompt",
+    "canonical_json",
+    "coerce_response",
+    "deterministic_history_statistics",
+    "deterministic_paper_statistics",
+    "deterministic_review_schedule",
+    "input_hash",
+    "make_cache_key",
+    "split_official_fields",
+    "split_question_payload",
+]
+

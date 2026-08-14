@@ -1,0 +1,3 @@
+# Python 3.12 / Windows CPU builds verified by the release workflow.
+paddleocr==3.7.0
+paddlepaddle==3.3.1

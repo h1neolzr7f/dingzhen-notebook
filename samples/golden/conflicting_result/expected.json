@@ -1,0 +1,77 @@
+{
+  "case_id": "conflicting_result",
+  "expected_status": "needs_review",
+  "question": {
+    "id": "q_fixture_004",
+    "paper_id": "paper_fixture_001",
+    "sequence": 4,
+    "question_type": "single_choice",
+    "stem_md": "2 + 2 = ?",
+    "options": [
+      {
+        "label": "A",
+        "content_md": "3"
+      },
+      {
+        "label": "B",
+        "content_md": "4"
+      },
+      {
+        "label": "C",
+        "content_md": "5"
+      },
+      {
+        "label": "D",
+        "content_md": "6"
+      }
+    ],
+    "user_answer": [
+      "A"
+    ],
+    "official_answer": [
+      "B"
+    ],
+    "is_correct": true,
+    "attempt_state": "answered",
+    "official_explanation_md": "2 与 2 相加等于 4，因此选择 B。",
+    "ocr_confidence": 0.99,
+    "parse_confidence": 0.99,
+    "evidence": {
+      "question_frames": [
+        "samples/golden/conflicting_result/screen_01.png"
+      ],
+      "analysis_frames": [
+        "samples/golden/conflicting_result/screen_01.png"
+      ],
+      "field_regions": {
+        "official_answer": [
+          {
+            "image": "samples/golden/conflicting_result/screen_01.png",
+            "bbox": [
+              88,
+              785,
+              350,
+              830
+            ],
+            "confidence": 0.99
+          }
+        ],
+        "official_explanation_md": [
+          {
+            "image": "samples/golden/conflicting_result/screen_01.png",
+            "bbox": [
+              88,
+              970,
+              995,
+              1055
+            ],
+            "confidence": 0.99
+          }
+        ]
+      }
+    }
+  },
+  "expected_review_reasons": [
+    "answer_result_conflict"
+  ]
+}

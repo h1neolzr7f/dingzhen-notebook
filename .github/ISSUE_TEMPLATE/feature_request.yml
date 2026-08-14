@@ -1,0 +1,18 @@
+name: 建议
+description: 提一个不涉及登录粉笔的改进
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: 要解决什么问题
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你希望怎样
+  - type: markdown
+    attributes:
+      value: 不接受登录粉笔、保存 Cookie、绕过付费或操作任意 App 的需求。
